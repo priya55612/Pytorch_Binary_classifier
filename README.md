@@ -3,7 +3,7 @@ Written in pytorch to implement a basic binary classifier for image classificati
 **Note:** PyTorch expects the data to be organized by folders with one folder for each class. Therefore, each class of images should be provided as a separate directory or folder in the [data_dir](https://github.com/priya55612/Pytorch_Binary_classifier/blob/master/train_data.py#L16) directory. 
 
 
-Code implementation steps:
+**Run the code:**
 
 ```python3 train_data.py```
 
