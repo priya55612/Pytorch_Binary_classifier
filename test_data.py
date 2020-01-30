@@ -9,16 +9,12 @@ from torch.autograd import Variable
 import argparse
 
 
-
-
-#device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
 device = torch.device("cuda" if torch.cuda.is_available() 
                                   else "cpu")
 
 
 model = torch.hub.load('pytorch/vision:v0.5.0', 'mobilenet_v2', pretrained=False, num_classes=2)
-model.load_state_dict(torch.load('/home/priyanka/Desktop/fingerprint_model.pth', map_location='cpu'))
+model.load_state_dict(torch.load('/home/priyanka/Desktop/fingerprint_model.pth', map_location='cpu')) #Specify the map_location if the code is run in local cpu machine
 
 model.eval()
 print(model)
@@ -45,6 +41,8 @@ def get_random_images(num):
     dataiter = iter(loader)
     images, labels = dataiter.next()
     return images, labels
+
+  
 to_pil = transforms.ToPILImage()
 images, labels = get_random_images(20)
 fig=plt.figure(figsize=(10,10))
