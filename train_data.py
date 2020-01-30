@@ -47,7 +47,7 @@ print(trainloader.dataset.classes)
 device = torch.device("cuda" if torch.cuda.is_available() 
                                   else "cpu")
 
-model = torch.hub.load('pytorch/vision:v0.5.0', 'mobilenet_v2', pretrained=False, num_classes=2)
+model = torch.hub.load('pytorch/vision:v0.5.0', 'mobilenet_v2', pretrained=False, num_classes=2)  #change num_classes for the no.of classes
 print(model)
 
 criterion = nn.NLLLoss()
